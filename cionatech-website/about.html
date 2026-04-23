@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Ciona Tech LLC - Houston's premier digital marketing agency. Our mission, vision, team, and commitment to driving ROI for businesses across Texas and the USA.">
+    <meta name="keywords" content="Ciona Tech, digital marketing agency Houston, about us, marketing team, Houston marketing company">
+    <title>About Us | Ciona Tech LLC - Houston Digital Marketing Agency</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        /* About Page Specific Styles */
+        .about-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            padding: 120px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        
+        .about-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .story-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .story-image {
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .mission-vision-values {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+        
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .mvv-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .mvv-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .mvv-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .mvv-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+        
+        .team-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .team-card {
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .team-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            color: var(--primary-color);
+        }
+        
+        .team-info {
+            padding: 25px;
+        }
+        
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .team-role {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .team-bio {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        .culture-section {
+            padding: 80px 0;
+            background: var(--darker-bg);
+            color: var(--white);
+        }
+        
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .culture-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 35px;
+            border-radius: var(--border-radius-lg);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .achievements-section {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 30px;
+            background: var(--white);
+            border-radius: var(--border-radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 600;
+        }
+        
+        .tools-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .tool-card {
+            text-align: center;
+            padding: 30px;
+            background: var(--light-bg);
+            border-radius: var(--border-radius-lg);
+            transition: var(--transition);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .tool-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+            background: var(--white);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-sm);
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .community-section {
+            padding: 80px 0;
+            background: var(--gradient-primary);
+            color: var(--white);
+        }
+        
+        .community-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        @media (max-width: 968px) {
+            .story-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🚀</span>
+                    <span class="logo-text">Ciona<span>Tech</span></span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li class="has-dropdown">
+                        <a href="#services">Services ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="services-seo.html">SEO</a></li>
+                            <li><a href="services-ppc.html">PPC</a></li>
+                            <li><a href="services-social.html">Social Media</a></li>
+                            <li><a href="services-web.html">Web Development</a></li>
+                            <li><a href="services-cro.html">Conversion Optimization</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary nav-cta">Get Free Audit</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container about-hero-content">
+            <div class="hero-grid">
+                <div class="hero-content" data-aos="fade-right">
+                    <h1 class="hero-title">
+                        We're Ciona Tech,<br>
+                        <span class="gradient-text">Your Growth Partners</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Based in Houston, Texas, we're a results-driven digital marketing agency 
+                        dedicated to transforming businesses through innovative strategies and 
+                        data-driven execution.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="contact.html" class="btn btn-primary">Work With Us</a>
+                        <a href="#story" class="btn btn-outline-light">Our Story</a>
+                    </div>
+                </div>
+                <div class="hero-lottie" data-aos="fade-left">
+                    <div id="about-hero-lottie"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <div class="story-grid">
+                <div class="story-content" data-aos="fade-right">
+                    <h2 class="section-title">How Ciona Tech Started</h2>
+                    <p class="lead-text">
+                        Founded in Houston, Texas, Ciona Tech LLC was born from a simple belief: 
+                        every business deserves access to enterprise-level digital marketing strategies.
+                    </p>
+                    <p>
+                        What began as a small team of passionate marketers has grown into a full-service 
+                        digital agency serving clients across Houston, Sugar Land, Katy, The Woodlands, 
+                        and beyond. Our journey started when our founders recognized a gap in the market 
+                        for transparent, results-focused marketing partnerships.
+                    </p>
+                    <p>
+                        Today, we pride ourselves on being more than just a service provider—we're 
+                        strategic partners invested in our clients' success. Our Houston roots keep 
+                        us grounded, while our innovative approach pushes boundaries.
+                    </p>
+                </div>
+                <div class="story-image" data-aos="fade-left">
+                    <div style="width:100%;height:400px;background:linear-gradient(135deg,#2563eb,#7c3aed);display:flex;align-items:center;justify-content:center;font-size:120px;color:white;">🏢</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision, Values -->
+    <section class="mission-vision-values">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Our Core Foundation</h2>
+                <p class="section-subtitle">The principles that guide everything we do</p>
+            </div>
+            <div class="mvv-grid">
+                <div class="mvv-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="mvv-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To empower businesses with cutting-edge digital marketing solutions that drive measurable growth, maximize ROI, and create lasting competitive advantages in their industries.</p>
+                </div>
+                <div class="mvv-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="mvv-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To become the most trusted digital marketing partner for businesses across Texas and the USA, known for innovation, transparency, and exceptional results that speak for themselves.</p>
+                </div>
+                <div class="mvv-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="mvv-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>
+                    </div>
+                    <h3>Our Values</h3>
+                    <p>Transparency in all communications, integrity in our practices, innovation in our strategies, accountability for results, and partnership in every relationship we build.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet the Team -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Meet Our Expert Team</h2>
+                <p class="section-subtitle">The talented professionals behind your success</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-image">👨‍💼</div>
+                    <div class="team-info">
+                        <h3 class="team-name">James Mitchell</h3>
+                        <p class="team-role">CEO & Founder</p>
+                        <p class="team-bio">15+ years in digital marketing. Former VP at Fortune 500 companies.</p>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-image">👩‍💻</div>
+                    <div class="team-info">
+                        <h3 class="team-name">Sarah Chen</h3>
+                        <p class="team-role">Head of SEO</p>
+                        <p class="team-bio">Technical SEO expert. Helped 200+ businesses rank #1.</p>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-image">👨‍🎨</div>
+                    <div class="team-info">
+                        <h3 class="team-name">Marcus Rodriguez</h3>
+                        <p class="team-role">Creative Director</p>
+                        <p class="team-bio">Award-winning designer. Brand storytelling specialist.</p>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-image">👩‍📊</div>
+                    <div class="team-info">
+                        <h3 class="team-name">Emily Thompson</h3>
+                        <p class="team-role">PPC Manager</p>
+                        <p class="team-bio">$10M+ ad spend managed. 5x average ROI for clients.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Culture -->
+    <section class="culture-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title" style="color:white;">Our Work Culture</h2>
+                <p class="section-subtitle" style="color:rgba(255,255,255,0.8);">What makes us different</p>
+            </div>
+            <div class="culture-grid">
+                <div class="culture-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>🔍 Transparency First</h3>
+                    <p>No hidden fees, no vague reports. You'll always know exactly where your budget goes and what results you're getting.</p>
+                </div>
+                <div class="culture-card" data-aos="fade-up" data-aos-delay="200">
+                    <h3>💡 Innovation Daily</h3>
+                    <p>We stay ahead of algorithm updates, emerging platforms, and industry trends so you don't have to.</p>
+                </div>
+                <div class="culture-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>🤝 Partnership Mindset</h3>
+                    <p>Your goals are our goals. We celebrate your wins and work through challenges together.</p>
+                </div>
+                <div class="culture-card" data-aos="fade-up" data-aos-delay="400">
+                    <h3>📊 Data-Driven Decisions</h3>
+                    <p>Every strategy is backed by research, testing, and real performance data—not guesswork.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="achievements-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Our Achievements</h2>
+                <p class="section-subtitle">Numbers that demonstrate our impact</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-number" data-target="250">0</div>
+                    <p class="stat-label">Clients Served</p>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-number" data-target="98">0</div>
+                    <p class="stat-label">% Client Retention</p>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-number" data-target="50">0</div>
+                    <p class="stat-label">Team Members</p>
+                </div>
+                <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stat-number" data-target="300">0</div>
+                    <p class="stat-label">% Avg. ROI Increase</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools & Certifications -->
+    <section class="tools-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Tools & Certifications</h2>
+                <p class="section-subtitle">Industry-leading platforms and recognized expertise</p>
+            </div>
+            <div class="tools-grid">
+                <div class="tool-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="tool-logo">G</div>
+                    <p>Google Partner</p>
+                </div>
+                <div class="tool-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="tool-logo">M</div>
+                    <p>Meta Certified</p>
+                </div>
+                <div class="tool-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="tool-logo">A</div>
+                    <p>Google Analytics</p>
+                </div>
+                <div class="tool-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="tool-logo">S</div>
+                    <p>SEMrush Partner</p>
+                </div>
+                <div class="tool-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="tool-logo">H</div>
+                    <p>HubSpot Certified</p>
+                </div>
+                <div class="tool-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="tool-logo">L</div>
+                    <p>LinkedIn Ads</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Houston Community -->
+    <section class="community-section">
+        <div class="container community-content">
+            <h2 class="section-title" style="color:white;" data-aos="fade-up">Proudly Serving Houston</h2>
+            <p style="font-size:1.2rem;margin:20px 0;color:rgba(255,255,255,0.9);" data-aos="fade-up" data-aos-delay="100">
+                As a Houston-based agency, we're deeply committed to our local community. 
+                We regularly sponsor local events, provide pro-bono services to nonprofits, 
+                and mentor aspiring entrepreneurs through Houston business incubators.
+            </p>
+            <p style="font-size:1.1rem;color:rgba(255,255,255,0.8);" data-aos="fade-up" data-aos-delay="200">
+                From Sugar Land to The Woodlands, Katy to Pearland—we're helping Houston 
+                businesses thrive in the digital age.
+            </p>
+            <div style="margin-top:40px;" data-aos="fade-up" data-aos-delay="300">
+                <a href="contact.html" class="btn btn-white">Join Our Success Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box" data-aos="zoom-in">
+                <h2>Ready to Work with Our Team?</h2>
+                <p>Let's discuss how Ciona Tech can transform your digital presence and drive real results.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">Schedule a Consultation</a>
+                    <a href="tel:+12548700892" class="btn btn-outline-light btn-large">Call (254) 870-0892</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🚀</span>
+                        <span class="logo-text">Ciona<span>Tech</span></span>
+                    </a>
+                    <p>Houston's premier digital marketing agency delivering ROI-driven strategies for businesses across Texas and the USA.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services-seo.html">SEO</a></li>
+                        <li><a href="services-ppc.html">PPC</a></li>
+                        <li><a href="services-social.html">Social Media</a></li>
+                        <li><a href="services-web.html">Web Development</a></li>
+                        <li><a href="services-cro.html">Conversion Optimization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="usa-map.html">Service Areas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 Houston, Texas, USA</li>
+                        <li>📧 info@cionatech.com</li>
+                        <li>📞 +1 (254) 870-0892</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ciona Tech LLC. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-toggle" aria-label="Open Chat">💬</button>
+        <div class="chat-box">
+            <div class="chat-header">
+                <h4>Chat with Us</h4>
+                <button class="chat-close">×</button>
+            </div>
+            <div class="chat-messages">
+                <div class="chat-message bot">
+                    <p>Hi! 👋 How can we help you grow your business today?</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type your message...">
+                <button type="submit">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll to Top -->
+    <button class="scroll-top" aria-label="Scroll to Top">↑</button>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out-cubic',
+            once: true,
+            offset: 50
+        });
+
+        // Lottie animation for hero
+        if(typeof lottie !== 'undefined') {
+            lottie.loadAnimation({
+                container: document.getElementById('about-hero-lottie'),
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'lottie/team-animation.json'
+            });
+        }
+
+        // Animate counters
+        const statNumbers = document.querySelectorAll('.stat-number');
+        const animateCounter = (el) => {
+            const target = parseInt(el.getAttribute('data-target'));
+            const increment = target / 50;
+            let current = 0;
+            const timer = setInterval(() => {
+                current += increment;
+                if(current >= target) {
+                    el.textContent = target + '+';
+                    clearInterval(timer);
+                } else {
+                    el.textContent = Math.floor(current);
+                }
+            }, 30);
+        };
+
+        // Intersection Observer for counters
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        statNumbers.forEach(num => observer.observe(num));
+    </script>
+</body>
+</html>

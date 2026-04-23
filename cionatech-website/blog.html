@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Digital marketing insights, SEO tips, PPC strategies, and industry trends from Ciona Tech LLC - Houston's marketing experts.">
+    <title>Blog | Ciona Tech LLC - Digital Marketing Insights</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .blog-hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); padding: 140px 0 80px; color: white; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; margin-top: 40px; }
+        .blog-card { background: var(--white); border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition); }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-xl); }
+        .blog-image { height: 220px; background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); display: flex; align-items: center; justify-content: center; font-size: 60px; }
+        .blog-content { padding: 25px; }
+        .blog-category { display: inline-block; padding: 5px 12px; background: var(--gradient-primary); color: white; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 15px; }
+        .blog-title { font-size: 1.3rem; margin-bottom: 10px; line-height: 1.4; }
+        .blog-excerpt { color: var(--text-secondary); margin-bottom: 20px; }
+        .blog-meta { display: flex; justify-content: space-between; align-items: center; color: var(--text-light); font-size: 0.9rem; }
+        .newsletter-section { background: var(--gradient-primary); padding: 80px 0; color: white; }
+        .newsletter-form { max-width: 500px; margin: 30px auto 0; display: flex; gap: 15px; }
+        .newsletter-input { flex: 1; padding: 15px 20px; border: none; border-radius: var(--border-radius); font-size: 1rem; }
+        .categories-filter { display: flex; gap: 10px; flex-wrap: wrap; margin: 30px 0; justify-content: center; }
+        .filter-btn { padding: 10px 20px; border: 2px solid #e2e8f0; background: white; border-radius: 25px; cursor: pointer; transition: var(--transition); font-weight: 500; }
+        .filter-btn:hover, .filter-btn.active { border-color: var(--primary-color); background: var(--primary-color); color: white; }
+        @media (max-width: 600px) { .newsletter-form { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar"><div class="container"><div class="nav-wrapper"><a href="index.html" class="logo"><span class="logo-icon">🚀</span><span class="logo-text">Ciona<span>Tech</span></span></a><button class="mobile-menu-toggle"><span></span><span></span><span></span></button><ul class="nav-menu"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li class="has-dropdown"><a href="#">Services ▾</a><ul class="dropdown"><li><a href="services-seo.html">SEO</a></li><li><a href="services-ppc.html">PPC</a></li><li><a href="services-social.html">Social Media</a></li><li><a href="services-web.html">Web Development</a></li></ul></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="blog.html" class="active">Blog</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html" class="btn btn-primary nav-cta">Get Free Audit</a></li></ul></div></div></nav>
+
+    <section class="blog-hero"><div class="container text-center"><h1 style="color:white;">Marketing Insights & Tips</h1><p style="color:rgba(255,255,255,0.9);font-size:1.2rem;max-width:600px;margin:15px auto;">Stay ahead with the latest digital marketing strategies, SEO tips, and industry trends from our Houston experts.</p></div></section>
+
+    <section style="padding:60px 0;"><div class="container">
+        <div class="categories-filter">
+            <button class="filter-btn active">All Posts</button>
+            <button class="filter-btn">SEO</button>
+            <button class="filter-btn">PPC</button>
+            <button class="filter-btn">Social Media</button>
+            <button class="filter-btn">Web Development</button>
+            <button class="filter-btn">Conversion Optimization</button>
+        </div>
+        <div class="blog-grid">
+            <article class="blog-card" data-aos="fade-up"><div class="blog-image">🔍</div><div class="blog-content"><span class="blog-category">SEO</span><h3 class="blog-title">10 Local SEO Strategies for Houston Businesses in 2024</h3><p class="blog-excerpt">Discover proven tactics to dominate local search results and attract more customers in the Houston area.</p><div class="blog-meta"><span>Jan 15, 2024</span><span>8 min read</span></div></div></article>
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="100"><div class="blog-image">📊</div><div class="blog-content"><span class="blog-category">PPC</span><h3 class="blog-title">Google Ads vs Meta Ads: Which Platform Delivers Better ROI?</h3><p class="blog-excerpt">A comprehensive comparison to help you allocate your advertising budget effectively.</p><div class="blog-meta"><span>Jan 10, 2024</span><span>6 min read</span></div></div></article>
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="200"><div class="blog-image">📱</div><div class="blog-content"><span class="blog-category">Social Media</span><h3 class="blog-title">Instagram Reels Strategy for Business Growth</h3><p class="blog-excerpt">Learn how to leverage short-form video content to boost engagement and drive sales.</p><div class="blog-meta"><span>Jan 5, 2024</span><span>7 min read</span></div></div></article>
+            <article class="blog-card" data-aos="fade-up"><div class="blog-image">💻</div><div class="blog-content"><span class="blog-category">Web Development</span><h3 class="blog-title">Website Speed Optimization: A Complete Guide</h3><p class="blog-excerpt">Improve your site performance and user experience with these proven optimization techniques.</p><div class="blog-meta"><span>Dec 28, 2023</span><span>10 min read</span></div></div></article>
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="100"><div class="blog-image">🎯</div><div class="blog-content"><span class="blog-category">Conversion Optimization</span><h3 class="blog-title">Landing Page Best Practices That Convert</h3><p class="blog-excerpt">Transform visitors into customers with these data-driven landing page optimization tips.</p><div class="blog-meta"><span>Dec 20, 2023</span><span>9 min read</span></div></div></article>
+            <article class="blog-card" data-aos="fade-up" data-aos-delay="200"><div class="blog-image">📈</div><div class="blog-content"><span class="blog-category">SEO</span><h3 class="blog-title">Core Web Vitals: What You Need to Know</h3><p class="blog-excerpt">Understanding Google's page experience signals and how they impact your rankings.</p><div class="blog-meta"><span>Dec 15, 2023</span><span>8 min read</span></div></div></article>
+        </div>
+    </div></section>
+
+    <section class="newsletter-section"><div class="container text-center"><h2 style="color:white;">Subscribe to Our Newsletter</h2><p style="color:rgba(255,255,255,0.9);">Get weekly marketing tips, industry updates, and exclusive insights delivered to your inbox.</p><form class="newsletter-form" onsubmit="event.preventDefault();alert('Thanks for subscribing!');this.reset();"><input type="email" class="newsletter-input" placeholder="Enter your email" required><button type="submit" class="btn btn-white">Subscribe</button></form></div></section>
+
+    <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-about"><a href="index.html" class="logo"><span class="logo-icon">🚀</span><span class="logo-text">Ciona<span>Tech</span></span></a><p>Houston's premier digital marketing agency.</p><div class="social-links"><a href="#">📘</a><a href="#">🐦</a><a href="#">💼</a><a href="#">📷</a></div></div><div class="footer-links"><h4>Services</h4><ul><li><a href="services-seo.html">SEO</a></li><li><a href="services-ppc.html">PPC</a></li><li><a href="services-social.html">Social Media</a></li><li><a href="services-web.html">Web Development</a></li></ul></div><div class="footer-links"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="case-studies.html">Case Studies</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html">Contact</a></li></ul></div><div class="footer-contact"><h4>Contact Info</h4><ul><li>📍 Houston, Texas</li><li>📧 info@cionatech.com</li><li>📞 +1 (254) 870-0892</li></ul></div></div><div class="footer-bottom"><p>&copy; 2024 Ciona Tech LLC. All rights reserved.</p><div class="legal-links"><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms of Service</a></div></div></div></footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>AOS.init({duration:800,easing:'ease-out-cubic',once:true});document.querySelectorAll('.filter-btn').forEach(btn=>{btn.addEventListener('click',()=>{document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));btn.classList.add('active');});});</script>
+</body>
+</html>

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional SEO services in Houston, TX. Boost your rankings, drive organic traffic, and grow your business with Ciona Tech's data-driven SEO strategies.">
+    <meta name="keywords" content="SEO services Houston, search engine optimization, local SEO, technical SEO, Houston SEO company">
+    <title>SEO Services Houston | Ciona Tech LLC - Digital Marketing Agency</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .service-hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            padding: 140px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .service-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%232563eb' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        .problems-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .problem-card {
+            background: var(--light-bg);
+            padding: 35px;
+            border-radius: var(--border-radius-lg);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .problem-icon {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .solution-section {
+            padding: 80px 0;
+            background: var(--gradient-primary);
+            color: var(--white);
+        }
+        
+        .solution-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .whats-included {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+        
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .included-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            box-shadow: var(--shadow-sm);
+        }
+        
+        .checkmark {
+            color: #10b981;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .process-steps {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .process-timeline {
+            max-width: 900px;
+            margin: 40px auto 0;
+            position: relative;
+        }
+        
+        .process-step {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: var(--light-bg);
+            border-radius: var(--border-radius-lg);
+            transition: var(--transition);
+        }
+        
+        .process-step:hover {
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .tools-showcase {
+            padding: 80px 0;
+            background: var(--darker-bg);
+            color: var(--white);
+        }
+        
+        .audience-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .audience-card {
+            text-align: center;
+            padding: 30px;
+            background: var(--light-bg);
+            border-radius: var(--border-radius-lg);
+            transition: var(--transition);
+        }
+        
+        .audience-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .why-choose-us {
+            padding: 80px 0;
+            background: var(--gradient-secondary);
+            color: var(--white);
+        }
+        
+        .pricing-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .pricing-card {
+            background: var(--white);
+            border: 2px solid #e2e8f0;
+            border-radius: var(--border-radius-lg);
+            padding: 40px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-xl);
+        }
+        
+        .pricing-card.featured::before {
+            content: 'Most Popular';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--gradient-primary);
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin: 20px 0;
+        }
+        
+        .price span {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">🚀</span>
+                    <span class="logo-text">Ciona<span>Tech</span></span>
+                </a>
+                <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="has-dropdown">
+                        <a href="#services">Services ▾</a>
+                        <ul class="dropdown">
+                            <li><a href="services-seo.html" class="active">SEO</a></li>
+                            <li><a href="services-ppc.html">PPC</a></li>
+                            <li><a href="services-social.html">Social Media</a></li>
+                            <li><a href="services-web.html">Web Development</a></li>
+                            <li><a href="services-cro.html">Conversion Optimization</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="case-studies.html">Case Studies</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary nav-cta">Get Free Audit</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Hero -->
+    <section class="service-hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content" data-aos="fade-right">
+                    <h1 class="hero-title">
+                        SEO Services in<br>
+                        <span class="gradient-text">Houston, Texas</span>
+                    </h1>
+                    <p class="hero-subtitle" style="color:rgba(255,255,255,0.9);">
+                        Dominate search results, drive qualified organic traffic, and grow your revenue 
+                        with our data-driven SEO strategies tailored for Houston businesses.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="contact.html" class="btn btn-primary">Get Free SEO Audit</a>
+                        <a href="#process" class="btn btn-outline-light">See Our Process</a>
+                    </div>
+                </div>
+                <div class="hero-lottie" data-aos="fade-left">
+                    <div id="seo-lottie" style="background:rgba(255,255,255,0.1);border-radius:20px;height:400px;display:flex;align-items:center;justify-content:center;font-size:120px;">🔍</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems Section -->
+    <section class="problems-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Struggling with These SEO Challenges?</h2>
+                <p class="section-subtitle">You're not alone. Many Houston businesses face these issues:</p>
+            </div>
+            <div class="problems-grid">
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="problem-icon">📉</div>
+                    <h3>Low Website Traffic</h3>
+                    <p>Your website isn't ranking on page 1, resulting in minimal organic visitors and missed opportunities.</p>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="problem-icon">🎯</div>
+                    <h3>Poor Keyword Rankings</h3>
+                    <p>Competitors outrank you for valuable keywords, stealing your potential customers.</p>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="problem-icon">🏪</div>
+                    <h3>No Local Visibility</h3>
+                    <p>Your business doesn't appear in "near me" searches or Google Maps results in Houston area.</p>
+                </div>
+                <div class="problem-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="problem-icon">💸</div>
+                    <h3>Wasted Ad Spend</h3>
+                    <p>Relying too heavily on paid ads without building sustainable organic growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution-section">
+        <div class="container solution-content">
+            <h2 class="section-title" style="color:white;" data-aos="fade-up">Our SEO Solution</h2>
+            <p style="font-size:1.2rem;margin:20px 0;color:rgba(255,255,255,0.9);" data-aos="fade-up" data-aos-delay="100">
+                We combine technical expertise, content strategy, and proven link-building tactics 
+                to improve your rankings, increase visibility, and drive qualified traffic that converts.
+            </p>
+            <div style="margin-top:40px;" data-aos="fade-up" data-aos-delay="200">
+                <a href="contact.html" class="btn btn-white btn-large">Start Your SEO Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="whats-included">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">What's Included in Our SEO Service</h2>
+                <p class="section-subtitle">Comprehensive SEO solutions designed for results</p>
+            </div>
+            <div class="included-grid">
+                <div class="included-item" data-aos="fade-up" data-aos-delay="100">
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <h4>Technical SEO Audit</h4>
+                        <p>Complete website analysis identifying issues affecting rankings and performance.</p>
+                    </div>
+                </div>
+                <div class="included-item" data-aos="fade-up" data-aos-delay="200">
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <h4>Keyword Research</h4>
+                        <p>In-depth research to identify high-value keywords your customers are searching.</p>
+                    </div>
+                </div>
+                <div class="included-item" data-aos="fade-up" data-aos-delay="300">
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <h4>On-Page Optimization</h4>
+                        <p>Optimize titles, meta descriptions, headers, and content for maximum impact.</p>
+                    </div>
+                </div>
+                <div class="included-item" data-aos="fade-up" data-aos-delay="400">
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <h4>Content Strategy</h4>
+                        <p>Strategic content planning that attracts, engages, and converts your audience.</p>
+                    </div>
+                </div>
+                <div class="included-item" data-aos="fade-up" data-aos-delay="500">
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <h4>Link Building</h4>
+                        <p>High-quality backlinks from authoritative sites to boost domain authority.</p>
+                    </div>
+                </div>
+                <div class="included-item" data-aos="fade-up" data-aos-delay="600">
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <h4>Local SEO</h4>
+                        <p>Google Business Profile optimization and local citation building for Houston market.</p>
+                    </div>
+                </div>
+                <div class="included-item" data-aos="fade-up" data-aos-delay="700">
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <h4>Monthly Reporting</h4>
+                        <p>Transparent reports showing rankings, traffic, and ROI metrics.</p>
+                    </div>
+                </div>
+                <div class="included-item" data-aos="fade-up" data-aos-delay="800">
+                    <span class="checkmark">✓</span>
+                    <div>
+                        <h4>Ongoing Optimization</h4>
+                        <p>Continuous improvements based on performance data and algorithm updates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process-steps">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Our Proven SEO Process</h2>
+                <p class="section-subtitle">A systematic approach to achieving lasting results</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step" data-aos="fade-right">
+                    <div class="step-number">1</div>
+                    <div>
+                        <h3>Comprehensive Audit & Analysis</h3>
+                        <p>We start with a deep dive into your current website performance, competitor landscape, and industry trends. This foundation informs every strategic decision we make.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">2</div>
+                    <div>
+                        <h3>Strategy Development</h3>
+                        <p>Based on our findings, we create a customized SEO roadmap with clear goals, target keywords, and actionable tactics aligned with your business objectives.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-right" data-aos-delay="200">
+                    <div class="step-number">3</div>
+                    <div>
+                        <h3>Implementation & Execution</h3>
+                        <p>Our team executes the strategy—optimizing your site, creating content, building links, and improving technical performance across all fronts.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-number">4</div>
+                    <div>
+                        <h3>Monitoring & Optimization</h3>
+                        <p>We continuously track performance, analyze data, and refine our approach to ensure sustained growth and adapt to search engine algorithm changes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-showcase">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title" style="color:white;">Tools We Use</h2>
+                <p class="section-subtitle" style="color:rgba(255,255,255,0.8);">Industry-leading platforms for maximum results</p>
+            </div>
+            <div class="tools-grid" style="margin-top:40px; display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:30px;">
+                <div class="tool-card" data-aos="zoom-in" data-aos-delay="100" style="background:rgba(255,255,255,0.1);color:white;">
+                    <div class="tool-logo" style="background:white;color:#2563eb;">G</div>
+                    <p>Google Analytics</p>
+                </div>
+                <div class="tool-card" data-aos="zoom-in" data-aos-delay="200" style="background:rgba(255,255,255,0.1);color:white;">
+                    <div class="tool-logo" style="background:white;color:#2563eb;">S</div>
+                    <p>SEMrush</p>
+                </div>
+                <div class="tool-card" data-aos="zoom-in" data-aos-delay="300" style="background:rgba(255,255,255,0.1);color:white;">
+                    <div class="tool-logo" style="background:white;color:#2563eb;">A</div>
+                    <p>Ahrefs</p>
+                </div>
+                <div class="tool-card" data-aos="zoom-in" data-aos-delay="400" style="background:rgba(255,255,255,0.1);color:white;">
+                    <div class="tool-logo" style="background:white;color:#2563eb;">M</div>
+                    <p>Moz Pro</p>
+                </div>
+                <div class="tool-card" data-aos="zoom-in" data-aos-delay="500" style="background:rgba(255,255,255,0.1);color:white;">
+                    <div class="tool-logo" style="background:white;color:#2563eb;">SC</div>
+                    <p>Search Console</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Target Audience -->
+    <section class="audience-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Who We Serve</h2>
+                <p class="section-subtitle">SEO solutions tailored for your industry</p>
+            </div>
+            <div class="audience-grid">
+                <div class="audience-card" data-aos="fade-up" data-aos-delay="100">
+                    <div style="font-size:48px;margin-bottom:15px;">🏥</div>
+                    <h4>Healthcare</h4>
+                    <p>Hospitals, clinics, and private practices looking to attract more patients.</p>
+                </div>
+                <div class="audience-card" data-aos="fade-up" data-aos-delay="200">
+                    <div style="font-size:48px;margin-bottom:15px;">🏠</div>
+                    <h4>Real Estate</h4>
+                    <p>Realtors and property managers wanting to dominate local searches.</p>
+                </div>
+                <div class="audience-card" data-aos="fade-up" data-aos-delay="300">
+                    <div style="font-size:48px;margin-bottom:15px;">🛒</div>
+                    <h4>E-commerce</h4>
+                    <p>Online stores seeking to increase product visibility and sales.</p>
+                </div>
+                <div class="audience-card" data-aos="fade-up" data-aos-delay="400">
+                    <div style="font-size:48px;margin-bottom:15px;">⚖️</div>
+                    <h4>Legal Services</h4>
+                    <p>Law firms needing to rank for competitive legal keywords.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title" style="color:white;">Why Choose Ciona Tech for SEO?</h2>
+                <p class="section-subtitle" style="color:rgba(255,255,255,0.8);">The Ciona Tech advantage</p>
+            </div>
+            <div class="mvv-grid" style="margin-top:40px;">
+                <div class="mvv-card" data-aos="fade-up" data-aos-delay="100" style="border-top-color:#10b981;">
+                    <h3>📊 Data-Driven Strategies</h3>
+                    <p>Every decision backed by comprehensive analytics and proven methodologies—not guesswork.</p>
+                </div>
+                <div class="mvv-card" data-aos="fade-up" data-aos-delay="200" style="border-top-color:#f59e0b;">
+                    <h3>🏆 Proven Track Record</h3>
+                    <p>250+ successful SEO campaigns with measurable results and documented ROI.</p>
+                </div>
+                <div class="mvv-card" data-aos="fade-up" data-aos-delay="300" style="border-top-color:#ef4444;">
+                    <h3>🤝 Dedicated Support</h3>
+                    <p>Your own SEO specialist available to answer questions and provide strategic guidance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">SEO Investment Plans</h2>
+                <p class="section-subtitle">Flexible packages designed for businesses of all sizes</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Starter</h3>
+                    <div class="price">$997<span>/month</span></div>
+                    <p>Perfect for small local businesses</p>
+                    <ul class="pricing-features">
+                        <li>✓ Technical SEO Audit</li>
+                        <li>✓ 10 Keywords Targeted</li>
+                        <li>✓ On-Page Optimization (5 pages)</li>
+                        <li>✓ Google Business Profile Setup</li>
+                        <li>✓ Monthly Performance Report</li>
+                        <li>✓ Email Support</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <h3>Growth</h3>
+                    <div class="price">$1,997<span>/month</span></div>
+                    <p>Ideal for growing businesses</p>
+                    <ul class="pricing-features">
+                        <li>✓ Everything in Starter</li>
+                        <li>✓ 25 Keywords Targeted</li>
+                        <li>✓ On-Page Optimization (15 pages)</li>
+                        <li>✓ 4 Blog Posts/Month</li>
+                        <li>✓ Link Building (5 links/month)</li>
+                        <li>✓ Bi-Weekly Strategy Calls</li>
+                        <li>✓ Priority Support</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom<span></span></div>
+                    <p>For large organizations</p>
+                    <ul class="pricing-features">
+                        <li>✓ Unlimited Keywords</li>
+                        <li>✓ Full Site Optimization</li>
+                        <li>✓ 8+ Blog Posts/Month</li>
+                        <li>✓ Advanced Link Building</li>
+                        <li>✓ Competitor Analysis</li>
+                        <li>✓ Weekly Strategy Calls</li>
+                        <li>✓ Dedicated Account Manager</li>
+                        <li>✓ Custom Reporting Dashboard</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="faq-section" style="padding:80px 0;background:var(--light-bg);">
+        <div class="container">
+            <div class="section-header text-center" data-aos="fade-up">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Common questions about our SEO services</p>
+            </div>
+            <div class="faq-container" style="max-width:800px;margin:40px auto 0;">
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <button class="faq-question">
+                        How long does it take to see SEO results?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>While some improvements can be seen within 4-6 weeks, significant SEO results typically take 3-6 months. SEO is a long-term strategy that builds momentum over time. We provide monthly reports so you can track progress every step of the way.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <button class="faq-question">
+                        Do you guarantee #1 rankings?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No ethical SEO agency can guarantee specific rankings because search algorithms constantly change. However, we guarantee to follow best practices, work tirelessly on your campaign, and provide transparent reporting on all improvements and results achieved.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <button class="faq-question">
+                        What makes your SEO services different?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We combine technical expertise with content excellence and proven link-building strategies. Our Houston-based team provides personalized attention, transparent communication, and strategies tailored to your specific industry and goals—not cookie-cutter solutions.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <button class="faq-question">
+                        Do I need SEO if I'm already running ads?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! SEO and PPC complement each other perfectly. While ads provide immediate visibility, SEO builds sustainable, long-term organic traffic. Together, they maximize your online presence and reduce your overall customer acquisition cost.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-box" data-aos="zoom-in">
+                <h2>Ready to Dominate Search Results?</h2>
+                <p>Get a free SEO audit and discover untapped opportunities to grow your organic traffic.</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn btn-primary btn-large">Get Free SEO Audit</a>
+                    <a href="tel:+12548700892" class="btn btn-outline-dark btn-large">Call (254) 870-0892</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">🚀</span>
+                        <span class="logo-text">Ciona<span>Tech</span></span>
+                    </a>
+                    <p>Houston's premier digital marketing agency delivering ROI-driven strategies for businesses across Texas and the USA.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services-seo.html">SEO</a></li>
+                        <li><a href="services-ppc.html">PPC</a></li>
+                        <li><a href="services-social.html">Social Media</a></li>
+                        <li><a href="services-web.html">Web Development</a></li>
+                        <li><a href="services-cro.html">Conversion Optimization</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="case-studies.html">Case Studies</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="usa-map.html">Service Areas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>📍 Houston, Texas, USA</li>
+                        <li>📧 info@cionatech.com</li>
+                        <li>📞 +1 (254) 870-0892</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Ciona Tech LLC. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 50 });
+    </script>
+</body>
+</html>
